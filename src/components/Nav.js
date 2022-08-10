@@ -1,0 +1,21 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+import brand from "../assets/images/logo-bg.png";
+import classes from "../styles/Nav.module.css";
+import Account from "./Account";
+
+export default function Nav() {
+  return (
+    <nav className={classes.nav}>
+      <ul>
+        <li>
+          <NavLink to="/" className={classes.brand}>
+            <img src={brand} alt="Learn with Sumit Logo" />
+            <h3>Learn with Sumit</h3>
+          </NavLink>
+        </li>
+      </ul>
+      <Account />
+    </nav>
+  );
+}
